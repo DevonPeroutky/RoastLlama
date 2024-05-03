@@ -1,0 +1,29 @@
+[project]
+name = "playground"
+version = "0.1.0"
+description = "Add a short description here"
+requires-python = ">= 3.11"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tool.pixi.pypi-dependencies]
+playground = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+pytorch = ">=2.1.2,<2.2"
+transformers = ">=4.40.1,<4.41"
+numpy = ">=1.26.4,<1.27"
+pixi-pycharm = ">=0.0.5,<0.1"
+pillow = ">=10.3.0,<10.4"
+requests = ">=2.31.0,<2.32"
+huggingface_hub = ">=0.22.2,<0.23"
+accelerate = ">=0.29.2,<0.30"
